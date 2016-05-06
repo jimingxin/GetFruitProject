@@ -14,6 +14,21 @@
 		68D331311CDC591D00B0910D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D3312F1CDC591D00B0910D /* LaunchScreen.storyboard */; };
 		68D3313C1CDC591E00B0910D /* GetFruitProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D3313B1CDC591E00B0910D /* GetFruitProjectTests.swift */; };
 		68D331471CDC591E00B0910D /* GetFruitProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D331461CDC591E00B0910D /* GetFruitProjectUITests.swift */; };
+		68D3315D1CDC762300B0910D /* bgMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 68D3315A1CDC762300B0910D /* bgMusic.wav */; };
+		68D3315E1CDC762300B0910D /* boomMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 68D3315B1CDC762300B0910D /* boomMusic.wav */; };
+		68D3315F1CDC762300B0910D /* startMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 68D3315C1CDC762300B0910D /* startMusic.wav */; };
+		68D3316B1CDC764F00B0910D /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D331601CDC764F00B0910D /* 0.png */; };
+		68D3316C1CDC764F00B0910D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D331611CDC764F00B0910D /* 1.png */; };
+		68D3316D1CDC764F00B0910D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D331621CDC764F00B0910D /* 2.png */; };
+		68D3316E1CDC764F00B0910D /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D331631CDC764F00B0910D /* 3.png */; };
+		68D3316F1CDC764F00B0910D /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D331641CDC764F00B0910D /* 4.png */; };
+		68D331701CDC764F00B0910D /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D331651CDC764F00B0910D /* 5.png */; };
+		68D331711CDC764F00B0910D /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D331661CDC764F00B0910D /* back.png */; };
+		68D331721CDC764F00B0910D /* belowBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D331671CDC764F00B0910D /* belowBg.png */; };
+		68D331731CDC764F00B0910D /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D331681CDC764F00B0910D /* bg.jpg */; };
+		68D331741CDC764F00B0910D /* boom.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D331691CDC764F00B0910D /* boom.png */; };
+		68D331751CDC764F00B0910D /* startBg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D3316A1CDC764F00B0910D /* startBg.jpg */; };
+		68D331771CDC77AC00B0910D /* StartViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D331761CDC77AC00B0910D /* StartViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +62,21 @@
 		68D331421CDC591E00B0910D /* GetFruitProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetFruitProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D331461CDC591E00B0910D /* GetFruitProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFruitProjectUITests.swift; sourceTree = "<group>"; };
 		68D331481CDC591E00B0910D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68D3315A1CDC762300B0910D /* bgMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bgMusic.wav; sourceTree = "<group>"; };
+		68D3315B1CDC762300B0910D /* boomMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boomMusic.wav; sourceTree = "<group>"; };
+		68D3315C1CDC762300B0910D /* startMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = startMusic.wav; sourceTree = "<group>"; };
+		68D331601CDC764F00B0910D /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		68D331611CDC764F00B0910D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		68D331621CDC764F00B0910D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		68D331631CDC764F00B0910D /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		68D331641CDC764F00B0910D /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		68D331651CDC764F00B0910D /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		68D331661CDC764F00B0910D /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		68D331671CDC764F00B0910D /* belowBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = belowBg.png; sourceTree = "<group>"; };
+		68D331681CDC764F00B0910D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		68D331691CDC764F00B0910D /* boom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boom.png; sourceTree = "<group>"; };
+		68D3316A1CDC764F00B0910D /* startBg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startBg.jpg; sourceTree = "<group>"; };
+		68D331761CDC77AC00B0910D /* StartViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +127,10 @@
 		68D331251CDC591D00B0910D /* GetFruitProject */ = {
 			isa = PBXGroup;
 			children = (
-				68D331261CDC591D00B0910D /* AppDelegate.swift */,
-				68D331281CDC591D00B0910D /* ViewController.swift */,
-				68D3312A1CDC591D00B0910D /* Main.storyboard */,
-				68D3312D1CDC591D00B0910D /* Assets.xcassets */,
-				68D3312F1CDC591D00B0910D /* LaunchScreen.storyboard */,
-				68D331321CDC591D00B0910D /* Info.plist */,
+				68D331571CDC723E00B0910D /* PersisternceLayer */,
+				68D331561CDC71EE00B0910D /* BusinessLogicLayer */,
+				68D331551CDC71E200B0910D /* PresentationLayer */,
+				68D331541CDC71C600B0910D /* Sources */,
 			);
 			path = GetFruitProject;
 			sourceTree = "<group>";
@@ -123,6 +151,71 @@
 				68D331481CDC591E00B0910D /* Info.plist */,
 			);
 			path = GetFruitProjectUITests;
+			sourceTree = "<group>";
+		};
+		68D331541CDC71C600B0910D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				68D331591CDC761300B0910D /* Recods */,
+				68D331581CDC75FC00B0910D /* Images */,
+				68D3312D1CDC591D00B0910D /* Assets.xcassets */,
+				68D331321CDC591D00B0910D /* Info.plist */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		68D331551CDC71E200B0910D /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				68D331261CDC591D00B0910D /* AppDelegate.swift */,
+				68D331761CDC77AC00B0910D /* StartViewViewController.swift */,
+				68D331281CDC591D00B0910D /* ViewController.swift */,
+				68D3312A1CDC591D00B0910D /* Main.storyboard */,
+				68D3312F1CDC591D00B0910D /* LaunchScreen.storyboard */,
+			);
+			name = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		68D331561CDC71EE00B0910D /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		68D331571CDC723E00B0910D /* PersisternceLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PersisternceLayer;
+			sourceTree = "<group>";
+		};
+		68D331581CDC75FC00B0910D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				68D331601CDC764F00B0910D /* 0.png */,
+				68D331611CDC764F00B0910D /* 1.png */,
+				68D331621CDC764F00B0910D /* 2.png */,
+				68D331631CDC764F00B0910D /* 3.png */,
+				68D331641CDC764F00B0910D /* 4.png */,
+				68D331651CDC764F00B0910D /* 5.png */,
+				68D331661CDC764F00B0910D /* back.png */,
+				68D331671CDC764F00B0910D /* belowBg.png */,
+				68D331681CDC764F00B0910D /* bg.jpg */,
+				68D331691CDC764F00B0910D /* boom.png */,
+				68D3316A1CDC764F00B0910D /* startBg.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		68D331591CDC761300B0910D /* Recods */ = {
+			isa = PBXGroup;
+			children = (
+				68D3315A1CDC762300B0910D /* bgMusic.wav */,
+				68D3315B1CDC762300B0910D /* boomMusic.wav */,
+				68D3315C1CDC762300B0910D /* startMusic.wav */,
+			);
+			name = Recods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +322,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D3316F1CDC764F00B0910D /* 4.png in Resources */,
 				68D331311CDC591D00B0910D /* LaunchScreen.storyboard in Resources */,
+				68D331751CDC764F00B0910D /* startBg.jpg in Resources */,
+				68D3316C1CDC764F00B0910D /* 1.png in Resources */,
+				68D3315D1CDC762300B0910D /* bgMusic.wav in Resources */,
+				68D331721CDC764F00B0910D /* belowBg.png in Resources */,
+				68D3315E1CDC762300B0910D /* boomMusic.wav in Resources */,
+				68D3316B1CDC764F00B0910D /* 0.png in Resources */,
+				68D331711CDC764F00B0910D /* back.png in Resources */,
+				68D331741CDC764F00B0910D /* boom.png in Resources */,
+				68D3316E1CDC764F00B0910D /* 3.png in Resources */,
+				68D3315F1CDC762300B0910D /* startMusic.wav in Resources */,
+				68D331731CDC764F00B0910D /* bg.jpg in Resources */,
+				68D3316D1CDC764F00B0910D /* 2.png in Resources */,
+				68D331701CDC764F00B0910D /* 5.png in Resources */,
 				68D3312E1CDC591D00B0910D /* Assets.xcassets in Resources */,
 				68D3312C1CDC591D00B0910D /* Main.storyboard in Resources */,
 			);
@@ -256,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D331771CDC77AC00B0910D /* StartViewViewController.swift in Sources */,
 				68D331291CDC591D00B0910D /* ViewController.swift in Sources */,
 				68D331271CDC591D00B0910D /* AppDelegate.swift in Sources */,
 			);
@@ -482,6 +590,7 @@
 				68D3314D1CDC591E00B0910D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68D3314E1CDC591E00B0910D /* Build configuration list for PBXNativeTarget "GetFruitProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +599,7 @@
 				68D331501CDC591E00B0910D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68D331511CDC591E00B0910D /* Build configuration list for PBXNativeTarget "GetFruitProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +608,7 @@
 				68D331531CDC591E00B0910D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
