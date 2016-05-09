@@ -34,10 +34,42 @@ class ViewController: UIViewController ,UIActionSheetDelegate ,AVAudioPlayerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //测试
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        belowImg = UIImageView(frame: CGRectMake(self.view.frame.size.width/2-35, 0.85*self.view.frame.size.height+10, 70, 15))
+        belowImg.image = UIImage(named: "belowBg.png")
+        self.view.addSubview(belowImg)
+        
+        //添加手势操作
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.handlePanGesture(_:)))
+        self.view.addGestureRecognizer(panGesture)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTapGesture(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        self.view.addGestureRecognizer(tapGesture)
+        
+        markbl.text = "当前分数：" + String(mark)
+        GameOn = true
+        
     }
 
+    override func viewWillAppear(animated: Bool) {
+        playBgMusic()
+        //启用定时器，控制每秒执行一次tickDown方法
+        timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(ViewController.tickDown), userInfo: nil, repeats: true)
+        
+        boomTimer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(ViewController.boomDown), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        audioPlayer.stop()
+        if GameOn == true {
+            timer.invalidate()
+            timer = nil
+            boomTimer.invalidate()
+            boomTimer = nil
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -149,7 +181,9 @@ class ViewController: UIViewController ,UIActionSheetDelegate ,AVAudioPlayerDele
         
     }
     
-    
+    /**
+     炸弹水果下降
+     */
     func boomDown() {
         if GameOn == true {
             
@@ -189,8 +223,87 @@ class ViewController: UIViewController ,UIActionSheetDelegate ,AVAudioPlayerDele
         }
     }
     
-    
+    func tickDown(){
+        if GameOn == true {
+            if leftTime <= 0 {
+                //取消定时器
+                timer.invalidate()
+            }
+            
+            if leftTime <= 99995 {
+                let img = self.view.viewWithTag(leftTime+3) as! UIImageView
+                
+                if img.frame.origin.x > belowImg.frame.origin.x-35 {
+                    if img.frame.origin.x < belowImg.frame.origin.x+55{
+                        let aimg = self.view.viewWithTag(leftTime+3) as! UIImageView
+                        aimg.hidden = true
+                        
+                        mark = mark + 1
+                        markbl.text = "当前分数："+String(mark)
+                        
+                    }else{
+                        mark = mark - 1
+                        gameOver()
+                    
+                    }
+                }else{
+                
+                    mark = mark - 1
+                    gameOver()
+                }
+                
+            }
+            
+            if leftTime <= 99994 {
+                let img = self.view.viewWithTag(leftTime+4) as! UIImageView
+                img.removeFromSuperview()
+            }
+            
+            leftTime -= 1
+            //修改UIDatePicker的剩余时间
+            index = UInt32(SCREEN_WIDTH*0.87)
+            index = arc4random_uniform(index)
+            show()
+        }else{
+            timer.invalidate()
+            timer = nil
+        
+        }
+        
+    }
 
+    func gameOver() {
+        if mark < 0 {
+            GameOn = false
+            self.mark = 0
+            self.markbl.text = "当前分数："+String(mark)
+            
+            let alertController = UIAlertController(title: "Game Over", message: "是否继续?", preferredStyle: UIAlertControllerStyle.Alert)
+            let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: { action in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })
+            
+            let okAction = UIAlertAction(title: "好的", style: UIAlertActionStyle.Destructive, handler: { (action) in
+                self.GameOn = true;
+                self.leftTime = 99999
+                self.boomLeftTime = 999
+                self.markbl.text = "当前分数："+String(self.mark)
+                
+                //启用定时器
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(ViewController.tickDown), userInfo: nil, repeats: true)
+                self.boomTimer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(ViewController.boomDown), userInfo: nil, repeats: true)
+            })
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(okAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }else{
+            markbl.text = "当前分数" + String(mark)
+        }
+        
+    }
+    
 }
 
 
