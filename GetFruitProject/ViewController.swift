@@ -139,6 +139,7 @@ class ViewController: UIViewController ,UIActionSheetDelegate ,AVAudioPlayerDele
         
     }
     
+    //显示水果图片，创建动画
     func show() {
         var img = UIImageView(frame: CGRectMake(CGFloat(index), 0, 50, 50)){
             willSet(frameChange){
@@ -202,6 +203,7 @@ class ViewController: UIViewController ,UIActionSheetDelegate ,AVAudioPlayerDele
                         mark = mark-5
                         playBoomMusic()
                         //重新计算分数或者结束游戏
+                        gameOver()
                     }
                 }
             }
